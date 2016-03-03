@@ -1,0 +1,57 @@
+html, body, ul, p, li{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #f8ecc2;
+	font-family: Arial, sans-serif;
+}
+
+nav{
+	background: #65a8a6;
+}
+
+nav li{
+	display: inline-block;
+}
+
+nav a{
+	text-decoration: none;
+	display: block;
+	padding: 20px;
+	color: #f8ecc2;
+}
+
+nav a:hover{
+	background: #e65540;
+}
+
+.menu-trigger{
+	text-align: center;
+	display: none;
+}
+
+.slider{
+	background: red;
+	height: 100px;
+}
+
+@media screen and (max-width: 500px){
+	nav li{
+		display: block;
+		text-align: center;
+	}
+	nav a{
+		border-bottom: 1px solid #79896d;
+	}
+
+	.menu-trigger{
+		display: block;
+	}
+
+	nav ul{
+		display: none;
+	}
+}
+
