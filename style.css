@@ -44,7 +44,7 @@ nav a:hover{
 	}
 	nav a{
 		border-bottom: 1px solid #79896d;
-	}
+	}	
 
 	.menu-trigger{
 		display: block;
@@ -52,6 +52,9 @@ nav a:hover{
 
 	nav ul{
 		display: none;
+		position: absolute;
+		width: 100%;
+		background: #65a8a6;
 	}
 }
 
