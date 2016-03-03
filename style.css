@@ -37,7 +37,7 @@ nav a:hover{
 	height: 100px;
 }
 
-@media screen and (max-width: 500px){
+@media (max-width: 500px){
 	nav li{
 		display: block;
 		text-align: center;
