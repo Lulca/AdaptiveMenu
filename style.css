@@ -1,4 +1,4 @@
-html, body, ul, p, li{
+html, body, ul, p, li, h1, h2, h3, h4{
 	margin: 0;
 	padding: 0;
 }
@@ -8,53 +8,19 @@ body{
 	font-family: Arial, sans-serif;
 }
 
-nav{
-	background: #65a8a6;
+h1{
+	padding: 10px;
+	background: pink;
+	font-size: 20px;
+	border-bottom: 1px solid black;
 }
 
-nav li{
-	display: inline-block;
+.wrapper{
+	width: 300px;
+	margin: 0 auto 0 auto;
 }
 
-nav a{
-	text-decoration: none;
-	display: block;
-	padding: 20px;
-	color: #f8ecc2;
+article{
+	padding: 10px;
+	background: #fff;
 }
-
-nav a:hover{
-	background: #e65540;
-}
-
-.menu-trigger{
-	text-align: center;
-	display: none;
-}
-
-.slider{
-	background: red;
-	height: 100px;
-}
-
-@media (max-width: 500px){
-	nav li{
-		display: block;
-		text-align: center;
-	}
-	nav a{
-		border-bottom: 1px solid #79896d;
-	}	
-
-	.menu-trigger{
-		display: block;
-	}
-
-	nav ul{
-		display: none;
-		position: absolute;
-		width: 100%;
-		background: #65a8a6;
-	}
-}
-

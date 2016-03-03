@@ -1,11 +1,16 @@
 $(function(){
-	$('.menu-trigger').click(function(){
-		$('nav ul').slideToggle(500);
-	});
+	$('.wrapper>article').not(':first').hide();
+	$('.wrapper>h1').click(function(){
+		var findArticle = $(this).next('article');
+		var findWrapper = $(this).closest('.wrapper');
 
-	$(window).resize(function(){
-		if ($(window).width() > 500){
-			$('nav ul').removeAttr('style');
+		if(findArticle.is(':visible')){
+			findArticle.slideUp();
 		}
+		else{
+			findWrapper.find('>article').slideUp();
+			findArticle.slideDown();
+		}
+
 	});
 });
