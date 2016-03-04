@@ -1,17 +1,31 @@
 $(function(){
-	$('.wrapper>article').not(':first').hide();
-	selectTitle = $('.wrapper>h1');
-	selectArticle = $('.wrapper>article');
-	
-	selectTitle.click(function(){
+	var navPos, winPos, navHeight;
 
-		if ($(this).next('article').is(':visible')){
-			$(this).next('article').slideUp();
+	function refreshNavPos(){
+		navPos = $('nav').offset().top;
+		navHeight = $('nav').outerHeight(true);
+	}
+	refreshNavPos();
+	$(window).resize(refreshNavPos);
+
+	$('<div class="navHeight"></div>').insertBefore('nav').css('height', navHeight).hide();
+
+	$(window).scroll(function(){
+		winPos = $(window).scrollTop();
+		console.log(winPos);
+
+		if (winPos >= navPos){
+			$('nav').addClass('fixed shadow');
+			$('.navHeight').show();
+		} else{
+			$('nav').removeClass('fixed shadow');
+			$('.navHeight').hide();
 		}
-		else {
-			selectArticle.slideUp();
-			$(this).next('article').slideDown();
-		}
+
 
 	});
+	
+
+
+	
 });
