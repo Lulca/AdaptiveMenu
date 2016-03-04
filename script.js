@@ -1,15 +1,16 @@
 $(function(){
 	$('.wrapper>article').not(':first').hide();
-	$('.wrapper>h1').click(function(){
-		var findArticle = $(this).next('article');
-		var findWrapper = $(this).closest('.wrapper');
+	selectTitle = $('.wrapper>h1');
+	selectArticle = $('.wrapper>article');
+	
+	selectTitle.click(function(){
 
-		if(findArticle.is(':visible')){
-			findArticle.slideUp();
+		if ($(this).next('article').is(':visible')){
+			$(this).next('article').slideUp();
 		}
-		else{
-			findWrapper.find('>article').slideUp();
-			findArticle.slideDown();
+		else {
+			selectArticle.slideUp();
+			$(this).next('article').slideDown();
 		}
 
 	});
