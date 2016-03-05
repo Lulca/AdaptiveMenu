@@ -1,31 +1,20 @@
 $(function(){
-	var navPos, winPos, navHeight;
+	var startPos = $('nav').position().top;
+	var currentPos = 0;
+	var heightOfNav = $('nav').outerHeight(true);
 
-	function refreshNavPos(){
-		navPos = $('nav').offset().top;
-		navHeight = $('nav').outerHeight(true);
-	}
-	refreshNavPos();
-	$(window).resize(refreshNavPos);
-
-	$('<div class="navHeight"></div>').insertBefore('nav').css('height', navHeight).hide();
+	$('<div class="navHeight"></div>').insertBefore('nav').css('height', heightOfNav).hide();
 
 	$(window).scroll(function(){
-		winPos = $(window).scrollTop();
-		console.log(winPos);
-
-		if (winPos >= navPos){
-			$('nav').addClass('fixed shadow');
+		currentPos = $(window).scrollTop();
+		if (currentPos >= startPos){
+			$('nav').addClass('fixed');
 			$('.navHeight').show();
 		} else{
-			$('nav').removeClass('fixed shadow');
+			$('nav').removeClass('fixed');
 			$('.navHeight').hide();
 		}
-
-
 	});
-	
 
-
-	
+		
 });
