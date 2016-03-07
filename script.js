@@ -1,22 +1,29 @@
 $(function () {
-	var tabMenu = $('.tab-menu li');
-	var tabContent = $('.tab-content>div');
+	var width = $('#slider-container').width();
+	$('.slides>li').width(width);
+	$('.slides').width(width*$('.slides>li').length);
+	$('.slides').css('left', -width);
+	$('.slides>li:last-child').prependTo('.slides');
 
-	tabContent.not(':first-of-type').hide();
+	function nextSlide() {
+		$('.slides').animate({
+			'margin-left':-width
+		}, 500, function() {
+			$('.slides>li:first-child').appendTo('.slides');
+			$('.slides').css('margin-left', 0);
+		});
+	}
 
-	tabMenu.on('click', function(){
-		$(this).siblings().removeClass('active');
-		$(this).addClass('active');
+	function prevSlide() {
+		$('.slides').animate({
+			'margin-left':width
+		}, 500, function() {
+			$('.slides>li:last-child').prependTo('.slides');
+			$('.slides').css('margin-left', 0);
+		});
+	}
 
-		var wrapper = $(this).closest('.tab-wrapper');
 
-		var wrapTabContentDiv = wrapper.find('div').not(':first');
-		var wrapTabContent = wrapper.find('.tab-content');
-
-		wrapTabContentDiv.hide();
-
-		var findAttr =  $(this).attr('data-tab');
-		wrapTabContent.find('[data-tab="'+findAttr+'"]').show();
-	
-	}); 
+	$('.next').click(nextSlide);
+	$('.prev').click(prevSlide);
 });
