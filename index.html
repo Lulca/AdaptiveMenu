@@ -5,28 +5,30 @@
 	<title>AdaptiveMenu</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </head>
 <body>
-	
-	<div id="slider-container">
-		<ul class="slides">
-			<li class="solid-bg">
-				<div>1</div>
-			</li>
-			<li>
-				<div>2</div>
-			</li>
-			<li class="solid-bg">
-				<div>3</div>
-			</li>
-		</ul>
+	<div class="container">
+		<div class="row">
+			<div id="slider-wrap">
+				<ul class="slides">
+					<li><img src="img/img-slide1.jpg" class="img-responsive" alt=""></li>
+					<li><img src="img/img-slide2.jpg" class="img-responsive" alt=""></li>
+					<li><img src="img/img-slide3.jpg" class="img-responsive" alt=""></li>
+					<li><img src="img/img-slide4.jpg" class="img-responsive" alt=""></li>
+				</ul>
 
-		<ul class="buttons">
-			<li class="prev">prev</li>
-			<li class="next">next</li>
-		</ul>
+				<ul class="buttons">
+					<li class="button">prev</li>
+					<li class="button">next</li>
+				</ul>
+			</div>	
+		</div>	
 	</div>
+	
+	
 
 	<script src="script.js"></script>
 </body>

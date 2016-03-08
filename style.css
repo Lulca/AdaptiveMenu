@@ -8,46 +8,11 @@ body{
 	font-family: Arial, sans-serif;
 }
 
-#slider-container{
-	position: relative;
-	background-color: #fff;
-	height: 350px;
-	width: 600px;
-	margin: 300px auto;
-	border-bottom: solid green 10px;
-	overflow: hidden;
-}
+#slider-wrap{
 
-.slides{
-	height: 100%;
-	position: relative;
 }
 
 .slides li{
-	background-color: #ecf0f1;
-	display: table;
-	float: left;
-	height: 100%;
-}
-
-.slides li div{
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-	font-size: 3em;
-	border: 1px solid black;
-}
-
-.buttons{
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-
-.buttons li{
-	display: inline-block;
-	margin: 10px;
-	background-color: #e67e22;
-	padding: 10px;
-	border-radius: 5px;
+	display: block;
+	width: 100px;
 }
