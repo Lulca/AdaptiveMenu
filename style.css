@@ -13,22 +13,3 @@ body{
 	color: #fff;
 }
 
-.button{
-	display: inline-block;
-	background-color: #63b4c9;
-	padding: 20px 50px;
-	margin-top: 70px;
-}
-
-.tooltip{
-	position: fixed;
-	display: block;
-	top: 0;
-	width: 400px;
-	background-color: #e7552c;
-	padding: 10px;
-
-}
-
-
-
